@@ -138,7 +138,7 @@ while (cont < numericArray.length && found === 0) {
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ["g", "n", "u", "z", "d", "y"];
+const charactersArray = ["g", "n", "u", "z", "d", "y", "z", "k"];
 console.log("----Esercizio 10----");
 for (let i = 0; i < charactersArray.length; i++) {
   switch (charactersArray[i]) {
@@ -207,5 +207,20 @@ for (let i = 0; i < charactersArray.length; i++) {
       break;
     default:
       console.log(`${charactersArray[i]} non fa parte dell'alfabeto italiano`);
+  }
+}
+//Soluzione alternativa
+console.log("----Soluzione alternativa----");
+for (let i = 0; i < charactersArray.length; i++) {
+  let appoggio = charactersArray[i].toUpperCase();
+  let x = appoggio.charCodeAt(0);
+  if (x === 74 || x === 75 || x === 87 || x === 88 || x === 89) {
+    console.log(`Carattere ${charactersArray[i]} non è presente nell'alfabeto italiano`);
+  } else if (x < 74) {
+    console.log(`Carattere ${charactersArray[i]} posizione ${x - 64}`);
+  } else if (x > 75 && x < 87) {
+    console.log(`Carattere ${charactersArray[i]} posizione ${x - 66}`);
+  } else if (x > 89) {
+    console.log(`Carattere ${charactersArray[i]} posizione ${x - 69}`);
   }
 }

@@ -138,77 +138,124 @@ while (cont < numericArray.length && found === 0) {
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ["g", "n", "u", "z", "d", "y", "z", "k"];
+const charactersArray = ["g", "n", "u", "z", "d", "y", "k", "s"];
 console.log("----Esercizio 10----");
+let pos = [],
+  pos1 = [];
 for (let i = 0; i < charactersArray.length; i++) {
   switch (charactersArray[i]) {
-    case "a":
+    case "a": {
+      pos.push(1);
       console.log(`${charactersArray[i]} = 1`);
       break;
-    case "b":
+    }
+    case "b": {
+      pos.push(2);
       console.log(`${charactersArray[i]} = 2`);
       break;
-    case "c":
+    }
+    case "c": {
+      pos.push(3);
       console.log(`${charactersArray[i]} = 3`);
       break;
-    case "d":
+    }
+    case "d": {
+      pos.push(4);
       console.log(`${charactersArray[i]} = 4`);
       break;
-    case "e":
+    }
+    case "e": {
+      pos.push(5);
       console.log(`${charactersArray[i]} = 5`);
       break;
-    case "f":
+    }
+    case "f": {
+      pos.push(6);
       console.log(`${charactersArray[i]} = 6`);
       break;
-    case "g":
+    }
+    case "g": {
+      pos.push(7);
       console.log(`${charactersArray[i]} = 7`);
       break;
-    case "h":
+    }
+    case "h": {
+      pos.push(8);
       console.log(`${charactersArray[i]} = 8`);
       break;
-    case "i":
+    }
+    case "i": {
+      pos.push(9);
       console.log(`${charactersArray[i]} = 9`);
       break;
-    case "l":
+    }
+    case "l": {
+      pos.push(10);
       console.log(`${charactersArray[i]} = 10`);
       break;
-    case "m":
+    }
+    case "m": {
+      pos.push(11);
       console.log(`${charactersArray[i]} = 11`);
       break;
-    case "n":
+    }
+    case "n": {
+      pos.push(12);
       console.log(`${charactersArray[i]} = 12`);
       break;
-    case "o":
+    }
+    case "o": {
+      pos.push(13);
       console.log(`${charactersArray[i]} = 13`);
       break;
-    case "p":
+    }
+    case "p": {
+      pos.push(14);
       console.log(`${charactersArray[i]} = 14`);
       break;
-    case "q":
+    }
+    case "q": {
+      pos.push(15);
       console.log(`${charactersArray[i]} = 15`);
       break;
-    case "r":
+    }
+    case "r": {
+      pos.push(16);
       console.log(`${charactersArray[i]} = 16`);
       break;
-    case "s":
+    }
+    case "s": {
+      pos.push(17);
       console.log(`${charactersArray[i]} = 17`);
       break;
-    case "t":
+    }
+    case "t": {
+      pos.push(18);
       console.log(`${charactersArray[i]} = 18`);
       break;
-    case "u":
+    }
+    case "u": {
+      pos.push(19);
       console.log(`${charactersArray[i]} = 19`);
       break;
-    case "v":
+    }
+    case "v": {
+      pos.push(20);
       console.log(`${charactersArray[i]} = 20`);
       break;
-    case "z":
+    }
+    case "z": {
+      pos.push(21);
       console.log(`${charactersArray[i]} = 21`);
       break;
-    default:
+    }
+    default: {
       console.log(`${charactersArray[i]} non fa parte dell'alfabeto italiano`);
+    }
   }
 }
+console.log(pos);
+
 //Soluzione alternativa
 console.log("----Soluzione alternativa----");
 for (let i = 0; i < charactersArray.length; i++) {
@@ -217,10 +264,14 @@ for (let i = 0; i < charactersArray.length; i++) {
   if (x === 74 || x === 75 || x === 87 || x === 88 || x === 89) {
     console.log(`Carattere ${charactersArray[i]} non è presente nell'alfabeto italiano`);
   } else if (x < 74) {
+    pos1.push(x - 64);
     console.log(`Carattere ${charactersArray[i]} posizione ${x - 64}`);
   } else if (x > 75 && x < 87) {
+    pos1.push(x - 66);
     console.log(`Carattere ${charactersArray[i]} posizione ${x - 66}`);
   } else if (x > 89) {
+    pos1.push(x - 69);
     console.log(`Carattere ${charactersArray[i]} posizione ${x - 69}`);
   }
 }
+console.log(pos1);
